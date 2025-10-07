@@ -5,6 +5,7 @@
 body {
     margin: 0;
     background-color: #d1beb4;
+    overflow: hidden;
 }
 h1, button {
     font-size: 3rem;
@@ -39,21 +40,33 @@ button {
 button:hover {
     transform: scale(1.1);
 }
-#tak {
+.tak {
     border: 0.4rem #a9ff28 solid;
     background-color: #87e100;
     box-shadow: 1rem 1rem 3rem #87e100;
 }
-#tak:hover {
+.tak:hover {
     border: 0.4rem #d9ff9f solid;
     background-color: #a3c275;
 }
-#nie {
+.nie {
     border: 0.4rem #ff5d30 solid;
     background-color: #d80000;
     box-shadow: 1rem 1rem 3rem #d80000;
 }
-#nie:hover {
+.nie:hover {
     border: 0.4rem #fdad97 solid;
     background-color: #ca7676;
+}
+.conf {
+    transition: 0.1s;
+    width: 40rem;
+    height: 20rem;
+    background-color: #feeaa6;
+    border: 0.2rem #ff006a solid;
+    border-radius: 2rem;
+    visibility: hidden;
+    position: fixed;
+    top: 60%;
+    right: 33%;
 }

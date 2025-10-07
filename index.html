@@ -15,25 +15,89 @@
         <main>
             <img src="mocha-and-milk-bears-milk.gif" alt="hug" width="100%" height="100%">
         <footer>
-            <button id="tak">TAK</button>
-            <button id="nie">NIE</button>
+            <button id="tak" class="tak">TAK</button>
+            <button id="nie" class="nie">NIE</button>
         </footer>
+        <div id="ui">
+            <div id="conf" class="conf">
+                <header>
+                    <h1>NAPEWNO!?</h1>
+                </header>
+                <main>
+                    <button id="tak-2" class="tak">TAK</button>
+                    <button id="nie-2" class="nie">NIE</button>
+                    <div id="love" class="conf">
+                        <header>
+                            <h1>KOCHASZ MNIE!?</h1>
+                        </header>
+                        <main>
+                            <button id="tak-3" class="tak">TAK</button>
+                            <button id="nie-3" class="nie">NIE</button>
+                            <div id="wedding" class="conf">
+                                <header>
+                                    <h1>ŚLUB!?</h1>
+                                </header>
+                                <main>
+                                    <button id="tak-4" class="tak">TAK</button>
+                                    <button id="nie-4" class="nie">NIE</button>
+                                </main>
+                        </main>
+                </main>
+            </div>
+        </div>
     </div>
     <script>
         id('tak').addEventListener('click', tak);
         id('nie').addEventListener('mouseover', nie);
+        id('tak-2').addEventListener('click', tak2);
+        id('nie-2').addEventListener('mouseover', nie2);
+        id('tak-3').addEventListener('click', tak3);
+        id('nie-3').addEventListener('mouseover', nie3);
+        id('tak-4').addEventListener('click', tak4);
+        id('nie-4').addEventListener('mouseover', nie4);
+
 
         function tak() {
-            
+            id('conf').style.visibility = 'visible';
+        }
+        function tak2() {
+            id('love').style.visibility = 'visible';
+        }
+        function tak3() {
+            id('wedding').style.visibility = 'visible';
+        }
+        function tak4() {
+            const yay = document.createElement('div');
+            yay.style.width = '30rem';
+            yay.style.height = '10rem';
+            yay.style.backgroundColor = '#feeaa6';
+            yay.style.border = '0.2rem #ff006a solid';
+            yay.style.borderRadius = '2rem';
+            yay.style.fontSize = '5rem';
+            yay.innerText = 'YIPEEE!!!!!';
+            randomPos(yay);
+            id('wedding').appendChild(yay);
         }
 
         function nie() {
-            const nie = id('nie').style
-            nie.position = 'fixed';
-            nie.bottom = Math.round(Math.random() * 90) + '%';
-            nie.right = Math.round(Math.random() * 90) + '%';
+            randomPos(id('nie'))
+        }
+        function nie2() {
+            randomPos(id('nie-2'))
+        }
+        function nie3() {
+            randomPos(id('nie-3'))
+        }
+        function nie4() {
+            randomPos(id('nie-4'))
         }
         
+        function randomPos(id) {
+            id.style.position = 'fixed';
+            id.style.bottom = Math.round(Math.random() * 90) + '%';
+            id.style.right = Math.round(Math.random() * 90) + '%';
+        }
+
         function id(id) {
             return document.getElementById(id);
         }
