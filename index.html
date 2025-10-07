@@ -5,7 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PREZENT</title>
     <link rel="icon" type="image/x-icon" href="heart.png">
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <style>
+        * {
+            font-family: "Comic Sans MS";
+            color: #960000;
+        }
+        body {
+            margin: 0;
+            background-color: #d1beb4;
+            overflow: hidden;
+        }
+        h1, button {
+            font-size: 3rem;
+            text-shadow: 1rem 1rem 1.5rem #430202;
+            transition: 0.5s;
+        }
+        h1:hover {
+            color: #ff0000;
+        }
+        img {
+            transition: 1s;
+        }
+        img:hover {
+            transform: scale(1.05);
+            border-radius: 5rem;
+        }
+        #content-box {
+            margin: 0 auto;
+            width: 30rem;
+            height: 50rem;
+            text-align: center;
+            border: 1rem #ff006a solid;
+            border-radius: 2rem;
+            box-shadow: 1rem 1rem 1rem #790032;
+            background: linear-gradient(#ff006a,#ea4a8d, #feeaa6, #feeaa6, #feeaa6);
+        }
+        button {
+            width: 14rem;
+            height: 10rem;
+            border-radius: 1rem;
+        }
+        button:hover {
+            transform: scale(1.1);
+        }
+        .tak {
+            border: 0.4rem #a9ff28 solid;
+            background-color: #87e100;
+            box-shadow: 1rem 1rem 3rem #87e100;
+        }
+        .tak:hover {
+            border: 0.4rem #d9ff9f solid;
+            background-color: #a3c275;
+        }
+        .nie {
+            border: 0.4rem #ff5d30 solid;
+            background-color: #d80000;
+            box-shadow: 1rem 1rem 3rem #d80000;
+        }
+        .nie:hover {
+            border: 0.4rem #fdad97 solid;
+            background-color: #ca7676;
+        }
+        .conf {
+            transition: 0.1s;
+            width: 40rem;
+            height: 20rem;
+            background-color: #feeaa6;
+            border: 0.2rem #ff006a solid;
+            border-radius: 2rem;
+            visibility: hidden;
+            position: fixed;
+            top: 60%;
+            right: 33%;
+        }
+    </style>
 </head>
 <body>
     <div id="content-box">
@@ -46,6 +119,61 @@
             </div>
         </div>
     </div>
-    <script src="script.js" type="application/javascript"></script> 
+    <script>
+        id('tak').addEventListener('click', tak);
+        id('nie').addEventListener('mouseover', nie);
+        id('tak-2').addEventListener('click', tak2);
+        id('nie-2').addEventListener('mouseover', nie2);
+        id('tak-3').addEventListener('click', tak3);
+        id('nie-3').addEventListener('mouseover', nie3);
+        id('tak-4').addEventListener('click', tak4);
+        id('nie-4').addEventListener('mouseover', nie4);
+
+
+        function tak() {
+            id('conf').style.visibility = 'visible';
+        }
+        function tak2() {
+            id('love').style.visibility = 'visible';
+        }
+        function tak3() {
+            id('wedding').style.visibility = 'visible';
+        }
+        function tak4() {
+            const yay = document.createElement('div');
+            yay.style.width = '30rem';
+            yay.style.height = '10rem';
+            yay.style.backgroundColor = '#feeaa6';
+            yay.style.border = '0.2rem #ff006a solid';
+            yay.style.borderRadius = '2rem';
+            yay.style.fontSize = '5rem';
+            yay.innerText = 'YIPEEE!!!!!';
+            randomPos(yay);
+            id('wedding').appendChild(yay);
+        }
+
+        function nie() {
+            randomPos(id('nie'))
+        }
+        function nie2() {
+            randomPos(id('nie-2'))
+        }
+        function nie3() {
+            randomPos(id('nie-3'))
+        }
+        function nie4() {
+            randomPos(id('nie-4'))
+        }
+
+        function randomPos(id) {
+            id.style.position = 'fixed';
+            id.style.bottom = Math.round(Math.random() * 90) + '%';
+            id.style.right = Math.round(Math.random() * 90) + '%';
+        }
+
+        function id(id) {
+            return document.getElementById(id);
+        }
+    </script> 
 </body>
 </html>
