@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PREZENT</title>
+    <link rel="icon" type="image/x-icon" href="heart.png">
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <div id="content-box">
+        <header>
+            <h1>LUBISZ MNIE?</h1>
+        </header>
+        <main>
+            <img src="mocha-and-milk-bears-milk.gif" alt="hug" width="100%" height="100%">
+        <footer>
+            <button id="tak">TAK</button>
+            <button id="nie">NIE</button>
+        </footer>
+    </div>
+    <script>
+        id('tak').addEventListener('click', tak);
+        id('nie').addEventListener('mouseover', nie);
+
+        function tak() {
+            
+        }
+
+        function nie() {
+            const nie = id('nie').style
+            nie.position = 'fixed';
+            nie.bottom = Math.round(Math.random() * 90) + '%';
+            nie.right = Math.round(Math.random() * 90) + '%';
+        }
+        
+        function id(id) {
+            return document.getElementById(id);
+        }
+    </script>
+</body>
+</html>

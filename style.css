@@ -1,0 +1,59 @@
+* {
+    font-family: "Comic Sans MS";
+    color: #960000;
+}
+body {
+    margin: 0;
+    background-color: #d1beb4;
+}
+h1, button {
+    font-size: 3rem;
+    text-shadow: 1rem 1rem 1.5rem #430202;
+    transition: 0.5s;
+}
+h1:hover {
+    color: #ff0000;
+}
+img {
+    transition: 1s;
+}
+img:hover {
+    transform: scale(1.05);
+    border-radius: 5rem;
+}
+#content-box {
+    margin: 0 auto;
+    width: 30rem;
+    height: 50rem;
+    text-align: center;
+    border: 1rem #ff006a solid;
+    border-radius: 2rem;
+    box-shadow: 1rem 1rem 1rem #790032;
+    background: linear-gradient(#ff006a,#ea4a8d, #feeaa6, #feeaa6, #feeaa6);
+}
+button {
+    width: 14rem;
+    height: 10rem;
+    border-radius: 1rem;
+}
+button:hover {
+    transform: scale(1.1);
+}
+#tak {
+    border: 0.4rem #a9ff28 solid;
+    background-color: #87e100;
+    box-shadow: 1rem 1rem 3rem #87e100;
+}
+#tak:hover {
+    border: 0.4rem #d9ff9f solid;
+    background-color: #a3c275;
+}
+#nie {
+    border: 0.4rem #ff5d30 solid;
+    background-color: #d80000;
+    box-shadow: 1rem 1rem 3rem #d80000;
+}
+#nie:hover {
+    border: 0.4rem #fdad97 solid;
+    background-color: #ca7676;
+}
